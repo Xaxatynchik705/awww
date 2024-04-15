@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#4dadf9, #b51249);
+}
+
+.akalu_kulatos {
+  position: absolute;
+  bottom: -120px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.akalu_kulatos span {
+  height: 60px;
+  width: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  animation: move 10s linear infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes move {
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+.akalu_kulatos span.odin {
+  animation-delay: 2.2s;
+  transform: scale(2.15);
+}
+
+.akalu_kulatos span.dva {
+  animation-delay: 3.5s;
+  transform: scale(1.55);
+}
+
+.akalu_kulatos span.tria {
+  animation-delay: 0.2s;
+  transform: scale(0.35);
+}
+
+.akalu_kulatos span.chetyre {
+  animation-delay: 6s;
+  transform: scale(2.15);
+}
+
+.akalu_kulatos span.pyate {
+  animation-delay: 7s;
+  transform: scale(0.5);
+}
+
+.akalu_kulatos span.shest {
+  animation-delay: 4s;
+  transform: scale(2.5);
+}
+
+.akalu_kulatos span.mudesya {
+  animation-delay: 3;
+  transform: scale(1.5);
+}
+
+.akalu_kulatos span:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 40%;
+  transform: skew(45deg) translateX(150px);
+  background: rgba(255, 255, 255, 0.15);
+  animation: mirror 3s linear infinite;
+}
+
+@keyframes mirror {
+  100% {
+    transform: translateX(-450px);
+  }
+}
+
+.akalu_kulatos span.odin:before {
+  animation-delay: 1.5s;
+}
+
+.akalu_kulatos span.dva:before {
+  animation-delay: 3.5s;
+}
+
+.akalu_kulatos span.tria:before {
+  animation-delay: 2.5s;
+}
+
+.akalu_kulatos span.chetyre:before {
+  animation-delay: 7.5s;
+}
+
+.akalu_kulatos span.pyate:before {
+  animation-delay: 4.5s;
+}
+
+.akalu_kulatos span.shest:before {
+  animation-delay: 0.5s;
+}
+
+.akalu_kulatos span.mudesya:before {
+  animation-delay: 6s;
+}
+
+.nakae_saurus {
+  z-index: 12;
+  width: 372px;
+  padding: 15px;
+  border-radius: 8px;
+  background: rgb(230 230 230 / 10%);
+  box-shadow: 0 20px 50px rgb(16 16 16 / 41%);
+  border-top: 1px solid rgb(234 234 234 / 50%);
+  border-left: 1px solid rgb(243 240 240 / 50%);
+}
+
+.nakae_saurus input[type="text"] {
+  width: 100%;
+  height: 100px;
+  margin: 0 3px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  text-align: right;
+  padding-right: 10px;
+  background: transparent;
+}
+
+.nakae_saurus input[type="button"] {
+  height: 64px;
+  color: #ececec;
+  width: calc(100% / 4 - 5px);
+  background: rgb(10 10 10 / 0%);
+  border-radius: 8px;
+  margin-top: 14px;
+  outline: none;
+  border: none;
+  font-size: 21px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nakae_saurus input[type="button"]:hover {
+  background: rgb(251 247 247 / 14%);
+}

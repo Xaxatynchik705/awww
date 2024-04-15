@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator PWA</title>
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключаем манифест приложения -->
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <!-- Контент вашего приложения -->
+    <div class="akalu_kulatos">
+        <!-- Спаны с классами odin, dva, tria, chetyre, pyate, shest, mudesya, mudesya -->
+    </div>
+    <!-- Другие блоки .akalu_kulatos -->
+    <div class="nakae_saurus">
+        <form action="#" name="forms">
+            <input type="text" name="answer">
+            <!-- Кнопки для ввода чисел и операций -->
+            <div class="acokumi_sionaka">
+                <input type="button" value="AC" onclick="clearInput()">
+                <input type="button" value="DEL" onclick="deleteLastCharacter()">
+                <input type="button" value="%" onclick="addPercentage()">
+                <input type="button" value="/" onclick="addDivision()">
+            </div>
+            <div class="acokumi_sionaka">
+                <input type="button" value="7" onclick="addNumbersAndMultiplication('7')">
+                <input type="button" value="8" onclick="addNumbersAndMultiplication('8')">
+                <input type="button" value="9" onclick="addNumbersAndMultiplication('9')">
+                <input type="button" value="*" onclick="addNumbersAndMultiplication('*')">
+            </div>
+            <div class="acokumi_sionaka">
+                <input type="button" value="4" onclick="addNumbersAndSubtraction('4')">
+                <input type="button" value="5" onclick="addNumbersAndSubtraction('5')">
+                <input type="button" value="6" onclick="addNumbersAndSubtraction('6')">
+                <input type="button" value="-" onclick="addNumbersAndSubtraction('-')">
+            </div>
+            <div class="acokumi_sionaka">
+                <input type="button" value="1" onclick="addNumbersAndAddition('1')">
+                <input type="button" value="2" onclick="addNumbersAndAddition('2')">
+                <input type="button" value="3" onclick="addNumbersAndAddition('3')">
+                <input type="button" value="+" onclick="addNumbersAndAddition('+')">
+            </div>
+            <div class="acokumi_sionaka">
+                <input type="button" value="0" onclick="addZeroAndDecimal('0')">
+                <input type="button" value="00" onclick="addZeroAndDecimal('00')">
+                <input type="button" value="." onclick="addZeroAndDecimal('.')">
+                <input type="button" value="=" onclick="calculate()">
+            </div>
+        </form>
+    </div>
+    <!-- Подключаем скрипт для логики калькулятора -->
+    <script src="calculator.js"></script>
+    <!-- Регистрация Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
